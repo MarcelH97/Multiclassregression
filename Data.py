@@ -43,9 +43,9 @@ def Loss(w):
 def gradient(w):
     return np.vstack(crossentropygradient(x,w,y))
 
-result_gd=gd(Loss,gradient,w,numb_iter=10000)
+result_gd=gd(Loss,gradient,w,numb_iter=100)
 w_gd=result_gd[2]
-result_adgd=ad_grad(Loss,gradient,w,numb_iter=10000)
+result_adgd=ad_grad(Loss,gradient,w,numb_iter=100)
 w_adgd=result_adgd[2]
 
 
@@ -53,4 +53,4 @@ w_adgd=result_adgd[2]
 pred_gd=softmaxvector(x,w_gd)
 pred_adgd=softmaxvector(x,w_adgd)
 
-ettet=28828
+test=84848
